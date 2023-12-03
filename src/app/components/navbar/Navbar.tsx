@@ -48,9 +48,9 @@ function Navbar({menuOpened, onLinkClick} :NavbarProps ){
                 <Link className='hover:underline' href="#about" aria-label="Link to section About">SOCIÉTÉ</Link>
                 <Link className='hover:underline' href="#skills" aria-label="Link to section Skills">SAVOIR-FAIRE</Link>
                 <Link className='hover:underline' href="#portfolio" aria-label="Link to section Portfolio">SUPPORTS DE COMMUNICATION</Link>
-                <Link className='hover:underline' href="#contact" aria-label="Link to section Contact">RECRUTEMENT</Link>
-                <Link className='hover:underline' href="#contact" aria-label="Link to section Contact">RÉFÉRENCES</Link>
-                <Link className='hover:underline' href="#contact" aria-label="Link to section Contact">PRESSE</Link>
+                <Link className='hover:underline' href="#contact" aria-label="Link to section rec">RECRUTEMENT</Link>
+                <Link className='hover:underline' href="#contact" aria-label="Link to section ref">RÉFÉRENCES</Link>
+                <Link className='hover:underline' href="#contact" aria-label="Link to section presse">PRESSE</Link>
                 <Link className='hover:underline' href="#contact" aria-label="Link to section Contact">CONTACT</Link>
             </nav>
         </>
