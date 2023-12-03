@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import Westfield from "public/preview-etui-a-baguette-westfield-parly.jpg"
-import Lille from "public/preview-set-de-table-publicitaire-multi-annonceurs-lilles-rennes.jpg"
-import Region from "public/preview-etui-a-baguette-publicitaire-formation-region-normandie.jpg"
+import Westfield from "public/preview-etui-a-baguette-westfield-parly.webp"
+import Lille from "public/preview-set-de-table-publicitaire-multi-annonceurs-lilles-rennes.webp"
+import Region from "public/preview-etui-a-baguette-publicitaire-formation-region-normandie.webp"
 
 export default function SectionActualite (){
     return (

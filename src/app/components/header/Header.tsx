@@ -34,7 +34,7 @@ function Header(){
             className={`flex p-4 justify-between w-full fixed z-[12] md:mb-[100px] h-[100px] ${opacityMenu} self-center shadow-xl border-b bg-white`}>
                 <div className='w-2/12 flex items-center sm:w-full sm:ml-8'>
                     <div className='w-[250px] h-[100px] flex items-center'>
-                        <Image src={LogoAutoCrea} alt='Logo Auto Crea' layout='responsive'/>
+                        <Image src={LogoAutoCrea} alt='Logo Auto Crea' sizes='30vw'/>
                     </div>
                 </div>
                 <div className='w-10/12 flex justify-end items-center sm:mt-[-5px]'>

@@ -15,14 +15,14 @@ export default function Section4SupportsHome (){
                 </div>
                 <div className="w-1/2 pl-4 sm:pl-0">
                     <div className="w-[400px] h-[250px] sm:w-[300px] h-[200px]">
-                        <Image src={Setdetable} alt="Exemple de set de table" layout="responsive"/>
+                        <Image src={Setdetable} alt="Exemple de set de table" sizes="30vw"/>
                     </div>
                 </div>
             </div>
             <div className="flex w-[85%] mx-auto gap-4 mt-12 sm:flex-col-reverse sm:w-full sm:mt-4">
                 <div className="w-1/2 pl-4 sm:pl-0">
                     <div className="w-[400px] h-[250px] sm:w-[300px] h-[200px]">
-                        <Image src={Setdetable} alt="Exemple de set de table" layout="responsive"/>
+                        <Image src={Setdetable} alt="Exemple de set de table" sizes="30vw"/>
                     </div>
                 </div>
                 <div className="flex flex-col w-1/2 gap-2 sm:w-full">
@@ -43,14 +43,14 @@ export default function Section4SupportsHome (){
                 </div>
                 <div className="w-1/2 pl-4 sm:pl-0">
                     <div className="w-[400px] h-[250px] sm:w-[300px] h-[200px]">
-                        <Image src={Setdetable} alt="Exemple de set de table" layout="responsive"/>
+                        <Image src={Setdetable} alt="Exemple de set de table" sizes="30vw"/>
                     </div>
                 </div>
             </div>
             <div className="flex w-[85%] mx-auto gap-4 mt-12 sm:flex-col-reverse sm:w-full sm:mt-4 ">
             <div className="w-1/2 pl-4 sm:pl-0">
                     <div className="w-[400px] h-[250px] sm:w-[300px] h-[200px]">
-                        <Image src={Setdetable} alt="Exemple de set de table" layout="responsive"/>
+                        <Image src={Setdetable} alt="Exemple de set de table" sizes="30vw"/>
                     </div>
                 </div>
                 <div className="flex flex-col w-1/2 gap-2 sm:w-full">

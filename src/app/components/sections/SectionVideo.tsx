@@ -1,44 +1,46 @@
 "use client"
 
-import YouTube from 'react-youtube';
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export default function SectionVideo (){
-    const [windowWidth, setWindowWidth] = useState(0);
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-        }
-    }, []);
-  const onError = (error:any) => {
-    console.error('YouTube Player Error:', error);
-  };
-  const opts = {
-    width: '480',
-    height: '270',
-  };
-  if (typeof window !== 'undefined' && windowWidth <= 480) {
-    opts.width = '350';
-    opts.height = '220';
+declare global {
+  interface Window {
+    onYouTubeIframeAPIReady: () => void;
+    YT: {
+      Player: new (id: string, options: any) => any;
+    };
   }
+}
 
-    return (
-        <section className="bg-gray-100 flex p-24 items-center justify-center w-full sm:flex-col sm:p-12 sm:gap-12">
-            <div className="flex flex-col w-1/2 items-center sm:w-full">
-                <h2 className="text-green-500 uppercase mb-12 text-xs">Fabrication étui à baguette publicitaire</h2>
-                <YouTube videoId={"ugvXdmknw44"} onError={onError} opts={opts}/>
-            </div>
-            <div className="flex flex-col w-1/2 items-center sm:w-full">
-                <h2 className="text-green-500 uppercase mb-12 text-xs">Spot publicitaire BFMTV</h2>
-                <YouTube videoId={"o9VRW3GwZtc"} onError={onError} opts={opts}/>
-            </div>
-        </section>
-    )
+export default function SectionVideo() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    script.async = true;
+    document.body.appendChild(script);
+    window.onYouTubeIframeAPIReady = () => {
+      new window.YT.Player('youtubePlayer1', {
+        videoId: 'ugvXdmknw44',
+        events: { onError: onError}
+      });
+      new window.YT.Player('youtubePlayer2', {
+        videoId: 'o9VRW3GwZtc',
+        events: { onError: onError}
+      });
+    };
+  }, []);
+  const onError = (event:any) => {
+    console.error('YouTube Player Error:', event);
+  };
+  return (
+    <section className="bg-gray-100 flex p-24 gap-8 items-center justify-center w-full sm:flex-col sm:p-12 sm:gap-12">
+      <div className="flex flex-col w-1/2 items-center sm:w-full">
+        <h2 className="text-green-500 uppercase mb-12 text-xs">Fabrication étui à baguette publicitaire</h2>
+        <div id="youtubePlayer1" className='w-[400px] h-[250px] sm:w-[300px] sm:h-[200px]'></div>
+      </div>
+      <div className="flex flex-col w-1/2 items-center sm:w-full">
+        <h2 className="text-green-500 uppercase mb-12 text-xs">Spot publicitaire BFMTV</h2>
+        <div id="youtubePlayer2" className='w-[400px] h-[250px] sm:w-[300px] sm:h-[200px]'></div>
+      </div>
+    </section>
+  );
 }

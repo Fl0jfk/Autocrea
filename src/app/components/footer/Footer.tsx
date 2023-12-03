@@ -67,7 +67,7 @@ export default function Footer (){
             </div>
             <div className="w-full flex flex-col sm">
                 <span className="bg-white w-[96%] mx-auto h-[1px]"></span>
-                <div className="flex self-end gap-1 items-center justify-center text-sm pt-4 sm:pb-4 sm:p-1 sm:pt-4">
+                <div className="flex self-end gap-1 items-center justify-center text-sm p-4 sm:pb-4 sm:p-1 sm:pt-4">
                     <p>&copy; 2023 autocrea</p>
                     <span>-</span>
                     <Link href={"/"}>Mentions légales</Link>
