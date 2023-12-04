@@ -5,7 +5,7 @@ import LogoWhite from "../../assets/images/logo-autocrea-light-20-ans.png"
 export default function Footer (){
     return (
         <footer className="bg-black text-white flex w-full flex-col">
-            <div className="h-[40vh] flex justify-center w-full gap-16 p-12 pt-24 sm:flex-col sm:h-full">
+            <div className="min-h-[40vh] flex justify-center w-full gap-16 p-12 pt-24 sm:flex-col h-full">
                 <div>
                     <Image src={LogoWhite} alt="Logo d'autocrea" width={250} height={175}/>
                 </div>

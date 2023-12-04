@@ -1,6 +1,6 @@
 export default function SectionSavoirFaireHome (){
     return(
-        <section className="flex h-[80vh] bg-gray-100 flex-col p-12 gap-12 sm:h-full">
+        <section className="flex min-h-[80vh] bg-gray-100 flex-col p-12 gap-12 h-full">
             <div className="flex gap-4 w-4/5 mx-auto mt-8 sm:flex-col sm:w-full">
                 <div className="w-1/2 flex flex-col gap-8 sm:w-full">
                     <h2 className="text-green-500">Notre savoir-faire</h2>
