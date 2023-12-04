@@ -35,7 +35,7 @@ const slides = [
 
 export default function SectionTemoignages (){
     return (
-        <section className="flex flex-col bg-black w-full h-[70vh] gap-16 items-center text-sm p-12 pt-[15vh] sm:h-[50vh] sm:p-4 sm:gap-2">
+        <section className="h-full flex flex-col bg-black w-full min-h-[70vh] gap-16 items-center text-sm p-12 pt-[15vh] sm:min-h-[50vh] sm:p-4 sm:gap-2">
             <h2 className="uppercase text-green-500">Témoignages</h2>
             <Slider data={slides}/>
         </section>

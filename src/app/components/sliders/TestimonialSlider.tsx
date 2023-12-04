@@ -26,7 +26,7 @@ export default function Slider ({ data }:SliderProps){
         return () => clearInterval(id)
     }, [slide, data.length]);
     return (
-        <div className="relative flex justify-center items-center w-full max-w-[1000px]">
+        <div className="relative flex justify-center items-center h-full w-full max-w-[1000px]">
             {data.map((item, idx) => {
                 return (
                     <div key={item.id} className={slide === idx ? "w-full h-full flex flex-col items-center justify-center" : "w-full h-full hidden"}>
